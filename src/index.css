@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0c1628;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+.removeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.remove{
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.RemoveQues{
+    font-size: 11px;
+}
+
+.option{
+    padding-top: px;
+}
+
+
+.option span{
+    padding: 10px;
+    font-size: 12px;
+}
+
+.navbar{
+    background-color: #121e36;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.navbar span{
+    color: #cbd5e1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.incomeLink, .expLink{
+    text-decoration: none;
+    position: relative;
+    
+}
+
+/* .incomeTitle{
+    color: #2dd4bf;
+} */
+
+ .incomeLink.active .incomeTitle,
+.expLink.active .expTitle
+{
+    color:#2dd4bf ;
+}
+
+.incomeLink.active::after,
+.expLink.active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 2px;
+    background:#2dd4bf;
+    border-radius: 2px;
+}
+

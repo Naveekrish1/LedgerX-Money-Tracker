@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 120vh;
+}
+
+ .mainHeader{
+   display: flex;
+   flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+} 
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+   background-color: #121e36;
+   color: #24c5b6;
+   margin-bottom: 25px;
+}
+
+.logo, .icon{
+  
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.name{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.tracker{
+    display: flex;
+    justify-content: space-between;
+    background-color: #121e36;
+    margin: 10px 10px;
+    padding: 12px;
+    border-radius: 10px;
+   
+}
+
+.tracker ul{
+    list-style-type: none;
+}
+
+.tracker li{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.incAmt{
+    color: #3ddc97;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.expAmt{
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.blnsAmt{
+    font-size: 18px;
+    font-weight: bold;
+    color: #24c5b6;
+}
+
+.exp, .inc, .blns{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.salIcon{
+    padding: 5px;
+}
+
+.records{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 2px;
+   /* flex-grow: 1;
+   overflow-y: auto; */
+}
+
+.lists{
+    background-color: #121e36;
+    margin:  10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.amtType{
+    font-size: 12px;
+    padding:0px 10px ;
+    /* flex: 1; */
+    min-width: 110px;
+}
+
+.amount{
+    font-size: 12px;
+    padding:0px 10px ;
+    width: 70px;
+    text-align: right;
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+
+.records button{
+    font-size: 15px;
+    padding: 3px 5px;
+    background-color: transparent;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    color: red;
+    font-weight: 400;
+    margin-left: auto;
+}
+
+.plus{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color:#121e36;
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    bottom: 0;
+}
+
+
+.plus button{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #24c5b6;
+    border: none;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.empty {
+    text-align: center;
+    color: #6b7280; /* subtle gray tone */
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .empty:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  /*   opacity: 1; */
+  }

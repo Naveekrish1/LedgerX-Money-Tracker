@@ -23,7 +23,7 @@ function TypeOfIncome({
             />
           </label>
      </form>
-     <form className={styles.amtForm}>
+     <form className={styles.amtFormInc}>
         <input type="button" value="Salary" onClick={() => handleIncomeFocus( "Salary")} />
 
         <input type="button" value="Bonus" onClick={() => handleIncomeFocus( "Bonus")} />

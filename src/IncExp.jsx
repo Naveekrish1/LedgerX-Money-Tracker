@@ -17,7 +17,7 @@ function IncomeExpenseForm({
     handleSubmit
   }) {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/LedgerX-Money-Tracker">
       <nav className="navbar">
         <NavLink to="/" className={({isActive}) => isActive ? "incomeLink active": "incomeLink"}><span className="incomeTitle">Income</span></NavLink> 
         <NavLink to="/exp" className={({isActive}) => isActive ? "expLink active" : "expLink"}><span className="expTitle">Expences</span></NavLink>
@@ -41,6 +41,15 @@ function IncomeExpenseForm({
                   expInputRef={expInputRef}
                   handleSubmit={handleSubmit}
               />}
+          />
+           <Route path="*" element={ <TypeOfIncome
+              income={income}
+              handleIncome={handleIncome}
+              handleIncomeAdd={handleIncomeAdd}
+              handleIncomeFocus={handleIncomeFocus}
+              incomeInputRef={incomeInputRef}
+              handleSubmit={handleSubmit}
+          />}
           />
       </Routes>
       </BrowserRouter>

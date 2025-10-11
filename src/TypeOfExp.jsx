@@ -13,7 +13,7 @@ function TypeOfExp  ({
         <h1 className={styles.addAmt}>Add Your Expences</h1>
         <form onSubmit={handleSubmit}>
           <label className={styles.amtType}>
-            Expences:
+            {/* Expences: */}
             <input
               ref={expInputRef}
               type="number"

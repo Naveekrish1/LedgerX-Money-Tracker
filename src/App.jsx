@@ -15,7 +15,7 @@ function App() {
   const [expList, setExpList] = useState([]);
   const [incomeType, setIncomeType] = useState([]);
   const [expType, setExpType] = useState([]);
-
+  const [showInp, setShowInp] = useState(false);
   const [showForm, setShowForm] = useState(false); // 👉 toggle state
  const [records, setRecords] = useState([]);
   const incomeInputRef = useRef(null);
@@ -68,8 +68,9 @@ function App() {
 
   // ✅ Category focus logic
   const handleIncomeFocus = ( incValue) => {
-    incomeInputRef.current.focus();
+   setTimeout(() => incomeInputRef.current?.focus(), 1000) 
     setIncomeType((prev) => [ ...prev, incValue]);
+    setShowInp(true);
   };
   const handleExpFocus = (expValue) => {
     expInputRef.current.focus();
@@ -79,6 +80,7 @@ function App() {
   const handleSubmit = (e) =>{
     e.preventDefault();
 }
+
 
 
 const handleDeleteRecords = (index) =>{
@@ -129,6 +131,7 @@ const handleDeleteRecords = (index) =>{
           incomeInputRef={incomeInputRef}
           expInputRef={expInputRef}
           handleSubmit={handleSubmit}
+          showInp={showInp}
         />
       )}
     </>

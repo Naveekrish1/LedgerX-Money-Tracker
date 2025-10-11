@@ -33,6 +33,8 @@
     border-radius: 10px;
     margin: 10px 10px;
     width: 70%;
+    position: fixed;
+    bottom: 0;
 }
 
 .amtType input::placeholder{

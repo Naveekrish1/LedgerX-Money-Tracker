@@ -6,14 +6,16 @@ function TypeOfIncome({
     handleIncomeAdd,
     handleIncomeFocus,
     incomeInputRef,
-    handleSubmit
+    handleSubmit,
+    showInp
 }) {
     return(
      <>
      <h1 className={styles.addAmt}>Add Your Income</h1>
+     {showInp && (
      <form onSubmit={handleSubmit}>
      <label className={styles.amtType}>
-            Income:
+            {/* Income: */}
             <input
               ref={incomeInputRef}
               type="number"
@@ -23,6 +25,8 @@ function TypeOfIncome({
             />
           </label>
      </form>
+     )}
+   
      <form className={styles.amtFormInc}>
         <input type="button" value="Salary" onClick={() => handleIncomeFocus( "Salary")} />
 

@@ -89,3 +89,10 @@
     font-weight: 700;
     border-radius: 10px;
 }
+
+.incKeyboard{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

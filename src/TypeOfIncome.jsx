@@ -13,6 +13,7 @@ function TypeOfIncome({
      <>
      <h1 className={styles.addAmt}>Add Your Income</h1>
      {showInp && (
+      <div className={styles.incKeyboard}>
      <form onSubmit={handleSubmit}>
      <label className={styles.amtType}>
             {/* Income: */}
@@ -26,6 +27,7 @@ function TypeOfIncome({
             />
           </label>
      </form>
+     </div>
      )}
    
      <form className={styles.amtFormInc}>

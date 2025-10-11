@@ -25,7 +25,8 @@ function App() {
 
   // ✅ Income logic
   const handleIncome = (e) => setIncome(Number(e.target.value));
-  const handleIncomeAdd = () => {
+  const handleIncomeAdd = (e) => {
+    if(e.key === "Enter"){
     const totalIncome = total + income;
     setTotal(totalIncome);
 
@@ -41,12 +42,15 @@ function App() {
      }
 
     setShowForm(false); // 👉 return to Summary
+    setShowInp(false);
+    }
   };
 
 
   // ✅ Expense logic
   const handleExpences = (e) => setExpences(Number(e.target.value));
-  const handleExpenceAdd = () => {
+  const handleExpenceAdd = (e) => {
+    if(e.key === "Enter"){
     const totalExp = expences + expenceAdd;
     setExpenceAdd(totalExp);
     const bal = total - totalExp;
@@ -62,8 +66,9 @@ function App() {
       alert("Please Enter Valid Expences")
       return;
     }
-
-    setShowForm(false); // 👉 return to Summary
+    setShowInp(false);
+    setShowForm(false); 
+  }// 👉 return to Summary
   };
 
   // ✅ Category focus logic
@@ -73,8 +78,9 @@ function App() {
     setShowInp(true);
   };
   const handleExpFocus = (expValue) => {
-    expInputRef.current.focus();
+    setTimeout(() => expInputRef.current?.focus(), 1000) 
     setExpType((prev) => [ ...prev ,expValue]);
+    setShowInp(true);
   };
 
   const handleSubmit = (e) =>{

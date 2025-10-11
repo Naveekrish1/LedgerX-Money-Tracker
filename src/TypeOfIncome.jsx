@@ -22,6 +22,7 @@ function TypeOfIncome({
               value={income}
               onChange={handleIncome}
               placeholder="Enter income..."
+              onKeyDown={handleIncomeAdd}
             />
           </label>
      </form>
@@ -36,9 +37,9 @@ function TypeOfIncome({
 
         <input type="button" value="Part-Time" onClick={() => handleIncomeFocus("Part-Time")} />
             </form>
-            <form className={styles.addBtn}>
+            {/* <form className={styles.addBtn}>
             <button  type="button" onClick={handleIncomeAdd}>Add</button>
-            </form>
+            </form> */}
      </>
 
     );

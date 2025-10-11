@@ -42,6 +42,7 @@ function IncomeExpenseForm({
                   handleExpFocus={handleExpFocus}
                   expInputRef={expInputRef}
                   handleSubmit={handleSubmit}
+                  showInp={showInp}
               />}
           />
            <Route path="*" element={ <TypeOfIncome

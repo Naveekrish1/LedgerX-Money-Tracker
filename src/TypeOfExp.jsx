@@ -7,7 +7,8 @@ function TypeOfExp  ({
   handleExpFocus,
   expInputRef,
   handleSubmit,
-  showInp
+  showInp,
+  handleBackBtn
 }){
     return(
         <>
@@ -44,6 +45,8 @@ function TypeOfExp  ({
    {/* <form className={styles.addBtn}>
    <button  type="button" onClick={handleExpenceAdd}>Add</button>
    </form> */}
+
+<button className={styles.backBtn} onClick={handleBackBtn}><i class="fa-solid fa-arrow-left"></i></button>
         </>
     );
 }

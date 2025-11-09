@@ -7,7 +7,8 @@ function TypeOfIncome({
     handleIncomeFocus,
     incomeInputRef,
     handleSubmit,
-    showInp
+    showInp,
+    handleBackBtn
 }) {
     return(
      <>
@@ -42,6 +43,7 @@ function TypeOfIncome({
             {/* <form className={styles.addBtn}>
             <button  type="button" onClick={handleIncomeAdd}>Add</button>
             </form> */}
+            <button className={styles.backBtn} onClick={handleBackBtn}><i class="fa-solid fa-arrow-left"></i></button>
      </>
 
     );

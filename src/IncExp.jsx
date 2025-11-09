@@ -15,7 +15,8 @@ function IncomeExpenseForm({
     incomeInputRef,
     expInputRef,
     handleSubmit,
-    showInp
+    showInp,
+    handleBackBtn
   }) {
     return (
       <BrowserRouter basename="/LedgerX-Money-Tracker">
@@ -32,6 +33,7 @@ function IncomeExpenseForm({
               incomeInputRef={incomeInputRef}
               handleSubmit={handleSubmit}
               showInp={showInp}
+              handleBackBtn={handleBackBtn}
           />}
           />
           <Route path="/exp" element={ 
@@ -43,6 +45,7 @@ function IncomeExpenseForm({
                   expInputRef={expInputRef}
                   handleSubmit={handleSubmit}
                   showInp={showInp}
+                  handleBackBtn={handleBackBtn}
               />}
           />
            <Route path="*" element={ <TypeOfIncome
@@ -53,6 +56,7 @@ function IncomeExpenseForm({
               incomeInputRef={incomeInputRef}
               handleSubmit={handleSubmit}
               showInp={showInp}
+              handleBackBtn={handleBackBtn}
           />}
           />
       </Routes>

@@ -10,7 +10,7 @@ function App() {
   const [expences, setExpences] = useState("");
   const [expenceAdd, setExpenceAdd] = useState(0);
   const [balance, setBalance] = useState(0);
-
+  
   const [incomeList, setIncomeList] = useState([]);
   const [expList, setExpList] = useState([]);
   const [incomeType, setIncomeType] = useState([]);
@@ -45,7 +45,10 @@ function App() {
     setShowInp(false);
     }
   };
-
+ 
+   const handleBackBtn = () =>{
+    setShowForm(false);
+   }
 
   // ✅ Expense logic
   const handleExpences = (e) => setExpences(Number(e.target.value));
@@ -138,6 +141,7 @@ const handleDeleteRecords = (index) =>{
           expInputRef={expInputRef}
           handleSubmit={handleSubmit}
           showInp={showInp}
+          handleBackBtn={handleBackBtn}
         />
       )}
     </>
